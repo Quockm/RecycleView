@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,15 @@ public class MainActivity extends AppCompatActivity {
         mArraylistMonan = Monan.mock();
         mMonanAdapter = new MonanAdapter(mArraylistMonan);
         mRcvMonan.setAdapter(mMonanAdapter);
+
+        mMonanAdapter.setonItemClick(new OnListener() {
+            @Override
+            public void onClick(int position) {
+                mArraylistMonan.remove(position);
+                mMonanAdapter.notifyItemRemoved(position);
+                // notifydatasetchanged
+            }
+        });
 
     }
 }
