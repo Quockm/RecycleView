@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mRcvMonan = findViewById(R.id.rcvMonan);
-        mock
-
+        mArraylistMonan = Monan.mock();
+        mMonanAdapter = new MonanAdapter(mArraylistMonan);
+        mRcvMonan.setAdapter(mMonanAdapter);
 
     }
 }

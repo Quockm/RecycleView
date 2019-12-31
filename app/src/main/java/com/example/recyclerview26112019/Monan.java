@@ -51,7 +51,7 @@ public class Monan {
     public void setGia(Integer gia) {
         this.gia = gia;
     }
-    public ArrayList<Monan> mock(){
+    public static ArrayList<Monan> mock(){
         ArrayList<Monan> mArraylistMonan = new ArrayList<>();
         mArraylistMonan.add(new Monan("Bánh Huế Thu Thảo","61 Quang Trung, P. 10, Gò Vấp, TP. HCM",R.drawable.banhhuethuthao,36000));
         mArraylistMonan.add(new Monan("Bún đậu mẹc","376 Lê Văn Thọ, P. 11, Gò Vấp, TP. HCM",R.drawable.bundaumet,44000));
